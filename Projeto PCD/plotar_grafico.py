@@ -21,15 +21,14 @@ red_fit_line = np.polyval(red_fit, gotas_data)
 green_fit_line = np.polyval(green_fit, gotas_data)
 
 # Criar o gráfico
-trace1 = go.Scatter(x=gotas_data, y=blue_data, mode='lines+markers', name='Y1', 
-                    error_y=dict(type='data', array=y_error_blue, visible=True))
-trace2 = go.Scatter(x=gotas_data, y=red_data, mode='lines+markers', name='Y2', 
-                    error_y=dict(type='data', array=y_error_red, visible=True))
-trace3 = go.Scatter(x=gotas_data, y=green_data, mode='lines+markers', name='Y3', 
-                    error_y=dict(type='data', array=y_error_green, visible=True))
-trace4 = go.Scatter(x=gotas_data, y=blue_fit_line, mode='lines', name='Blue')
-trace5 = go.Scatter(x=gotas_data, y=red_fit_line, mode='lines', name='Red')
-trace6 = go.Scatter(x=gotas_data, y=green_fit_line, mode='lines', name='Green')
+trace1 = go.Scatter(x=gotas_data, y=blue_data, mode='markers', marker= dict(color = "Black"), name='Y1',
+                    error_y=dict(type='data', array=y_error_blue, visible=True, color = "black"))
+trace2 = go.Scatter(x=gotas_data, y=red_data, mode='markers', marker= dict(color = "Black"), name='Y2', 
+                    error_y=dict(type='data', array=y_error_red, visible=True, color = "black"))
+trace3 = go.Scatter(x=gotas_data, y=green_data, mode='markers', marker= dict(color = "Black"),name='Y3',        error_y=dict(type='data', array=y_error_green, visible=True, color = "black"))
+trace4 = go.Scatter(x=gotas_data, y=blue_fit_line, mode='lines', name='Blue', line = dict(color = "Blue"))
+trace5 = go.Scatter(x=gotas_data, y=red_fit_line, mode='lines', name='Red', line = dict(color = "Red"))
+trace6 = go.Scatter(x=gotas_data, y=green_fit_line, mode='lines', name='Green', line = dict(color = "Green"))
 
 layout = go.Layout(title='Gráfico Linear Interativo com Ajuste',
                    xaxis=dict(title='Gotas'),
