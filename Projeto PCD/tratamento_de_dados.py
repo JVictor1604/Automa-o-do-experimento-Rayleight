@@ -1,4 +1,4 @@
-def tratar_dados(caminho, separador_de_coluna, intervalo_de_gotas, N_de_amostras):
+def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     import os 
     import glob as gb
     import pandas as pd
@@ -40,7 +40,7 @@ def tratar_dados(caminho, separador_de_coluna, intervalo_de_gotas, N_de_amostras
             desvio_Azul.append(df['Blue'].sem())
 
                 
-    n_de_gotas = [ i * intervalo_de_gotas for i in range(N_de_amostras)]
+    n_de_gotas = [ i * int(input("Digite o intervalo de gotas adicionado em cada amostra ")) for i in range(numero_de_amostras)]
 
     return media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho
     

@@ -1,8 +1,8 @@
 from medicao import medicao
+from tratamento_de_dados import tratar_dados
 
 def main() :
 
-    medicao()
-
+    tratar_dados("dados", ",", medicao())
 
 main()

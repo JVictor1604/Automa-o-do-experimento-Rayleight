@@ -46,4 +46,6 @@ def medicao():
     for nome_do_arquivo, dados_das_amostras in medir_amostra(numero_de_amostras, BAUD_RATE=9600, PORTA_SERIAL=Porta_Serial):
         criar_arquivo_com_medicoes(nome_do_arquivo, dados_das_amostras)
 
+    return numero_de_amostras
+
 medicao()
