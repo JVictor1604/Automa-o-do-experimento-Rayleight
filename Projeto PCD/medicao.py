@@ -1,43 +1,49 @@
 import os
 import serial
 import serial.tools.list_ports
+import time
 
-def identificar_porta_arduino():
-    """
-    Retorna a porta COM fornecida pelo usuário.
-    """
-    porta = input("Digite a porta COM à qual o Arduino está conectado (ex: COM3): ")
-    return porta
+# Verifica se a pasta 'dados' existe e a cria se necessário
+if not os.path.exists('dados'):
+    os.makedirs('dados')
 
-def ler_dado_serial(porta_serial):
-    """
-    Lê um dado da porta serial e retorna a linha formatada.
-    """
-    BAUD_RATE = 9600  # Definindo a taxa de baud como 9600
-    with serial.Serial(porta_serial, BAUD_RATE, timeout=1) as pserial:
-        # Certifique-se de que há um timeout para que não fique esperando indefinidamente por dados
-        line = pserial.readline().decode('utf-8').rstrip()
-        return line
-with open(nome_do_arquivo, 'a') as arquivo:
-        arquivo.write(dado + '\n')
+def medir_amostra(num_amostras, BAUD_RATE, PORTA_SERIAL):
+    """Cria um arquivo txt para armazenar os dados e inicia a medição de cada amostra, que será registrada 50 vezes"""
+    for numero_amostra in range(num_amostras):
+        print(f"Iniciando medição da amostra {numero_amostra + 1}")
+        time.sleep(0.5)  # Pequeno atraso para estabilizar a comunicação serial
+        NOME_DO_ARQUIVO = f'dados/amostra-{numero_amostra + 1}.txt'
+        # Lista para armazenar as medições da amostra atual
+        dados_amostra = []
+        
+        # Inicia a comunicação serial uma vez por amostra
+        with serial.Serial(PORTA_SERIAL, BAUD_RATE) as pserial:
+            # Realiza as 50 medições para cada amostra
+            for numero_medicao in range(50):
+                # Lê a porta serial, decodifica e limpa a string
+                line = pserial.readline().decode('utf-8').rstrip().replace("Blue:", "").replace("Red:", "").replace("Green:", "")
+                # Exibe a leitura da porta serial no terminal Python
+                print(line)
+                # Adiciona a medição à lista de medições da amostra atual
+                dados_amostra.append(line)
+        
+        # Retorna o nome do arquivo e os dados da amostra
+        yield NOME_DO_ARQUIVO, dados_amostra
 
-def main():
-    # Criar a pasta 'dados' se ela não existir
-    if not os.path.exists('dados'):
-        os.makedirs('dados')
+def criar_arquivo_com_medicoes(nome_do_arquivo, dados_das_amostras):
+    # Escreve as medições da amostra atual em um arquivo
+    with open(nome_do_arquivo, 'w') as arquivo:
+        for medicao in dados_das_amostras:
+            arquivo.write(medicao + '\n')
 
-    numero_arquivo = 1
-    numero_de_amostras = int(input("Digite o número de amostras que você deseja fazer: "))
+def medicao():
+    # Definindo o número de amostras
+    numero_de_amostras = int(input("Defina o Número de Amostras Desejadas: "))
+    Numero_da_Porta_Serial = int(input("Digite a porta serial à qual o Arduino está conectado (ex: 11): "))
+    Porta_Serial = f"COM{Numero_da_Porta_Serial}"
 
-    # Solicitar ao usuário que insira a porta COM à qual o Arduino está conectado
-    PORTA_SERIAL = identificar_porta_arduino()
+    # Executa a medição e cria os arquivos
+    for nome_do_arquivo, dados_das_amostras in medir_amostra(numero_de_amostras, BAUD_RATE=9600, PORTA_SERIAL=Porta_Serial):
+        criar_arquivo_com_medicoes(nome_do_arquivo, dados_das_amostras)
 
-    for i in range(numero_de_amostras):
-        NOME_DO_ARQUIVO = f'dados/medida_espalhamento-{numero_arquivo}.txt'
-        dado = ler_dado_serial(PORTA_SERIAL)
-        print(dado)  # Imprimir o dado lido da porta serial
-        salvar_dado_em_arquivo(NOME_DO_ARQUIVO, dado)
-        numero_arquivo += 1
-
-if __name__ == "__main__":
-    main()
+medicao()
