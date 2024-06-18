@@ -18,9 +18,9 @@ def calculo_de_ajuste(gotas, blue, red, green):
 
     return blue_fit_line, red_fit_line, green_fit_line
 
-def pontos_grafico_com_erros(gotas):
-    
-    """ Essa função coloca os pontos no gráfico com as suas respectivas barras de erro, nesse caso, apenas vertical pois o número de gotas é constante. O scatter é utilizado em gráficos de dispersão e são utilizados para determinar a relação entre duas variáveis numéricas"""
+   def pontos_grafico_com_erros(x_data, y_data, y_error, name):
+
+     """ Essa função coloca os pontos no gráfico com as suas respectivas barras de erro, nesse caso, apenas vertical pois o número de gotas é constante. O scatter é utilizado em gráficos de dispersão e são utilizados para determinar a relação entre duas variáveis numéricas"""
 
     trace1 = go.Scatter(x=gotas_data, y=blue_data, mode='markers', marker= dict(color = "Black"), name='Y1',
                         error_y=dict(type='data', array=y_error_blue, visible=True, color = "black"))
@@ -28,13 +28,15 @@ def pontos_grafico_com_erros(gotas):
                         error_y=dict(type='data', array=y_error_red, visible=True, color = "black"))
     trace3 = go.Scatter(x=gotas_data, y=green_data, mode='markers', marker= dict(color = "Black"),name='Y3',        error_y=dict(type='data', array=y_error_green, visible=True, color = "black"))
 
-def curvas_grafico_com_ajuste(linha_azul, linha_vermelha, linha_verde) :
+def curvas_grafico_com_ajuste(linha_azul, linha_vermelha, linha_verde)
     
     """ Essa função faz a linha já ajustada e incrementa com os pontos no gráfico com as suas respectivas barras de erro. """
 
     trace4 = go.Scatter(x=gotas_data, y= linha_azul, mode='lines', name='Blue', line = dict(color = "Blue"))
     trace5 = go.Scatter(x=gotas_data, y= linha_vermelha, mode='lines', name='Red', line = dict(color = "Red"))
     trace6 = go.Scatter(x=gotas_data, y= linha_verde, mode='lines', name='Green', line = dict(color = "Green"))
+
+
 
 
     layout = go.Layout(title='Gráfico Linear Interativo com Ajuste',
