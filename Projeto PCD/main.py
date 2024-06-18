@@ -1,5 +1,6 @@
 from medicao import medicao
 from tratamento_de_dados import tratar_dados
+<<<<<<< HEAD
 from plotar_grafico import plotar_grafico
 
 def main() :
@@ -12,5 +13,11 @@ def main() :
 
     plotar_grafico(gotas, dadosblue, dadosred, dadosgreen)
 
+=======
+
+def main() :
+
+    tratar_dados("dados", ",", medicao())
+>>>>>>> 7dc0e77d82991478e1d03c1fc0a94045bf0754fe
 
 main()

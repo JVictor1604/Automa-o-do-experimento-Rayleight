@@ -35,7 +35,17 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
             media_Azul_Unica = df['Blue'].mean()
             media_Azul.append(media_Azul_Unica - media_Azul_referencia)
             desvio_Azul.append(df['Blue'].sem())
+<<<<<<< HEAD
  
     n_de_gotas = [ (i * intervalo_de_gotas) for i in range(numero_de_amostras)]
  
     return media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho
+=======
+
+                
+    n_de_gotas = [ i * int(input("Digite o intervalo de gotas adicionado em cada amostra ")) for i in range(numero_de_amostras)]
+
+    return media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho
+    
+    
+>>>>>>> 7dc0e77d82991478e1d03c1fc0a94045bf0754fe
