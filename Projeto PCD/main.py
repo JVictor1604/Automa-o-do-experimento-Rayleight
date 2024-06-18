@@ -9,9 +9,11 @@ def main() :
 
     medicao(numero_de_amostras)
 
-    media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas = tratar_dados("dados", ",", numero_de_amostras)
+    media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas = tratar_dados("dados", ",", numero_de_amostras)
 
-    plotar_grafico(media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas)
+    print(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas)
+
+    #plotar_grafico(media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas)
 
 
 main()
