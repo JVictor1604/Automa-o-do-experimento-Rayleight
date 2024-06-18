@@ -12,21 +12,22 @@ def medir_amostra(num_amostras, BAUD_RATE, PORTA_SERIAL):
     for numero_amostra in range(num_amostras):
         print(f"Iniciando medição da amostra {numero_amostra + 1}")
         time.sleep(0.5)  # Pequeno atraso para estabilizar a comunicação serial
-        NOME_DO_ARQUIVO = f'dados/amostra-{numero_amostra + 1}.txt'
+        NOME_DO_ARQUIVO = f'dados/amostra-{numero_amostra + 1:02d}.txt'
         # Lista para armazenar as medições da amostra atual
         dados_amostra = []
         
         # Inicia a comunicação serial uma vez por amostra
         with serial.Serial(PORTA_SERIAL, BAUD_RATE) as pserial:
             # Realiza as 50 medições para cada amostra
-            for numero_medicao in range(5):
+            for numero_medicao in range(51):
                 # Lê a porta serial, decodifica e limpa a string
                 line = pserial.readline().decode('utf-8').rstrip().replace("Blue:", "").replace("Red:", "").replace("Green:", "")
                 # Exibe a leitura da porta serial no terminal Python
                 print(line)
                 # Adiciona a medição à lista de medições da amostra atual
                 dados_amostra.append(line)
-        input("Pressione Enter para ir a próxima medição...")
+        if numero_amostra - 1  != num_amostras:
+            input("Pressione Enter para ir a próxima medição...")
         
         # Retorna o nome do arquivo e os dados da amostra
         yield NOME_DO_ARQUIVO, dados_amostra
@@ -39,8 +40,24 @@ def criar_arquivo_com_medicoes(nome_do_arquivo, dados_das_amostras):
 
 def medicao(num_de_amostras):
     # Definindo o número de amostras
-    Numero_da_Porta_Serial = int(input("Digite a porta serial à qual o Arduino está conectado (ex: 11): "))
-    Porta_Serial = f"COM{Numero_da_Porta_Serial}"
+    
+    while True:
+        try:
+            Numero_da_Porta_Serial = int(input("Digite a porta serial à qual o Arduino está conectado (ex: 11): "))
+            Porta_Serial = f"COM{Numero_da_Porta_Serial}"
+            
+            # Tentar abrir a porta serial
+            ser = serial.Serial(Porta_Serial)
+            ser.close()
+            
+            print(f"Conectado com sucesso na porta {Porta_Serial}")
+            break
+        except ValueError:
+            print("Por favor, digite um número de porta válido.")
+        except serial.SerialException:
+            print("Erro ao tentar conectar. Por favor, verifique se a porta está correta e tente novamente.")
+
+
 
     # Executa a medição e cria os arquivos
     for nome_do_arquivo, dados_das_amostras in medir_amostra(num_de_amostras, BAUD_RATE=9600, PORTA_SERIAL=Porta_Serial):

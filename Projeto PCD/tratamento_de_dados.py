@@ -14,9 +14,19 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     desvio_Vermelho = []
     desvio_Verde = []
     desvio_Azul = []
-    intervalo_de_gotas = int(input("Digite o intervalo de gotas adicionado em cada amostra: "))
+
+    while True:
+            try:
+                intervalo_de_gotas = int(input("Digite o intervalo de gotas adicionado em cada amostra: "))
+                if intervalo_de_gotas > 0:
+                    break
+                else:
+                    print("Por favor, digite um número inteiro maior que zero.")
+            except ValueError:
+                print("Por favor, digite um número inteiro válido.")
+    
     for arquivo in conjunto_de_dados:
-        df = pd.read_csv(arquivo, delimiter = separador_de_coluna, names = ['Blue', 'Red', 'Green'])
+        df = pd.read_csv(arquivo, delimiter = separador_de_coluna, names = ['Blue', 'Red', 'Green'], skiprows= 1)
         if contador == 0:
             media_Vermelho_referencia = df['Red'].mean()
             desvio_Vermelho.append(df['Red'].sem())
@@ -37,5 +47,9 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
             desvio_Azul.append(df['Blue'].sem())
  
     n_de_gotas = [ (i * intervalo_de_gotas) for i in range(numero_de_amostras)]
- 
+
+    print(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas)
+
     return(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas)
+
+    
