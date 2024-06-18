@@ -1,7 +1,7 @@
 from medicao import medicao
 from tratamento_de_dados import tratar_dados
-<<<<<<< HEAD
 from plotar_grafico import plotar_grafico
+
 
 def main() :
 
@@ -9,15 +9,9 @@ def main() :
 
     medicao(numero_de_amostras)
 
-    tratar_dados("dados", ",", numero_de_amostras)
+    media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas = tratar_dados("dados", ",", numero_de_amostras)
 
-    plotar_grafico(gotas, dadosblue, dadosred, dadosgreen)
+    plotar_grafico(media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas)
 
-=======
-
-def main() :
-
-    tratar_dados("dados", ",", medicao())
->>>>>>> 7dc0e77d82991478e1d03c1fc0a94045bf0754fe
 
 main()
