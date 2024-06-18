@@ -46,7 +46,14 @@ def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_
 
     trace1, trace2, trace3 = pontos_grafico_com_erros(n_de_gotas, media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde)
 
-    traaitle='Médias'))
+    trace4, trace5, trace6 = curvas_grafico_com_ajuste(n_de_gotas, linha_azul, linha_vermelha, linha_verde)
+
+
+    # Exibir o gráfico
+
+    layout = go.Layout(title='Gráfico Linear Interativo com Ajuste',
+                    xaxis=dict(title='Gotas'),
+                    yaxis=dict(title='Médias'))
 
     fig = go.Figure(data=(trace1, trace2, trace3, trace4, trace5, trace6), layout=layout)
 
