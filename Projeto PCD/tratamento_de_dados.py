@@ -48,8 +48,6 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
  
     n_de_gotas = [ (i * intervalo_de_gotas) for i in range(numero_de_amostras)]
 
-    print(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas)
-
     return(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas)
 
     
