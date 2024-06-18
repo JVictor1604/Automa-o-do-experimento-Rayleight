@@ -3,12 +3,10 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     import glob as gb
     import pandas as pd
     import numpy as np
-    
     padrao = os.path.join(caminho, "*.txt")
     gb.glob(padrao)
     conjunto_de_dados = gb.glob(padrao)
-    
-    
+
     contador = 0 
     media_Vermelho = [0]
     media_Verde = [0]
@@ -16,8 +14,7 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     desvio_Vermelho = []
     desvio_Verde = []
     desvio_Azul = []
-    print(padrao)
-    print(conjunto_de_dados)
+    intervalo_de_gotas = int(input("Digite o intervalo de gotas adicionado em cada amostra: "))
     for arquivo in conjunto_de_dados:
         df = pd.read_csv(arquivo, delimiter = separador_de_coluna, names = ['Blue', 'Red', 'Green'])
         if contador == 0:
@@ -38,6 +35,12 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
             media_Azul_Unica = df['Blue'].mean()
             media_Azul.append(media_Azul_Unica - media_Azul_referencia)
             desvio_Azul.append(df['Blue'].sem())
+<<<<<<< HEAD
+ 
+    n_de_gotas = [ (i * intervalo_de_gotas) for i in range(numero_de_amostras)]
+ 
+    return media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho
+=======
 
                 
     n_de_gotas = [ i * int(input("Digite o intervalo de gotas adicionado em cada amostra ")) for i in range(numero_de_amostras)]
@@ -45,3 +48,4 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     return media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho
     
     
+>>>>>>> 7dc0e77d82991478e1d03c1fc0a94045bf0754fe
