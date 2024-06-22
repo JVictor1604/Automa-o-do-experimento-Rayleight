@@ -16,10 +16,10 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
   - Bibliotecas Python: Bibliotecas
     [![pyserial](https://img.shields.io/badge/pyserial-Latest-green)](https://pypi.org/project/pyserial/)
     [![matplotlib](https://img.shields.io/badge/matplotlib-Latest-blue)](https://matplotlib.org/)
-    [![numpy](https://img.shields.io/badge/numpy-Latest-orange)](https://numpy.org/){:target="_blank"}
-    [![pandas](https://img.shields.io/badge/pandas-Latest-yellow)](https://pandas.pydata.org/){:target="_blank"}
-    [![plotly](https://img.shields.io/badge/plotly-Latest-purple)](https://plotly.com/python/){:target="_blank"}
-    [![time](https://img.shields.io/badge/time-Latest-red)](https://docs.python.org/3/library/time.html){:target="_blank"}
+    [![numpy](https://img.shields.io/badge/numpy-Latest-orange)](https://numpy.org/)
+    [![pandas](https://img.shields.io/badge/pandas-Latest-yellow)](https://pandas.pydata.org/)
+    [![plotly](https://img.shields.io/badge/plotly-Latest-purple)](https://plotly.com/python/)
+    [![time](https://img.shields.io/badge/time-Latest-red)](https://docs.python.org/3/library/time.html)
 ## Instalação
 
 1. **Clone o repositório:**
