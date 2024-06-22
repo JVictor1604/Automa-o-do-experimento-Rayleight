@@ -68,6 +68,29 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
 4. Push para o branch (\`git push origin feature/nova-feature\`).
 5. Crie um novo Pull Request.
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="imagens/ana_luiza.jpg" alt="Ana Luiza" width="100" height="100"><br>
+        <sub><b>Ana Luiza</b></sub>
+      </td>
+      <td align="center">
+        <img src="imagens/marco_tulio.jpg" alt="Marco Tulio" width="100" height="100"><br>
+        <sub><b>Marco Tulio</b></sub>
+      </td>
+      <td align="center">
+        <img src="imagens/yasmin.jpg" alt="Yasmin" width="100" height="100"><br>
+        <sub><b>Yasmin</b></sub>
+      </td>
+      <td align="center">
+        <img src="imagens/jose_victor.jpg" alt="José Victor" width="100" height="100"><br>
+        <sub><b>José Victor</b></sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Colaboradores
 - Ana Luiza: Implementação da função de medição do sensor de cor RGB.
 - Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
