@@ -72,19 +72,19 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
   <table>
     <tr>
       <td align="center">
-        <img src="imagens/ana_luiza.jpg" alt="Ana Luiza" width="100" height="100"><br>
+        <img src="imagens/ana.jpeg" alt="Ana Luiza" width="100" height="100"><br>
         <sub><b>Ana Luiza</b></sub>
       </td>
       <td align="center">
-        <img src="imagens/marco_tulio.jpg" alt="Marco Tulio" width="100" height="100"><br>
+        <img src="imagens/marco.jpeg" alt="Marco Tulio" width="100" height="100"><br>
         <sub><b>Marco Tulio</b></sub>
       </td>
       <td align="center">
-        <img src="imagens/yasmin.jpg" alt="Yasmin" width="100" height="100"><br>
+        <img src="imagens/yasmin.jpeg" alt="Yasmin" width="100" height="100"><br>
         <sub><b>Yasmin</b></sub>
       </td>
       <td align="center">
-        <img src="imagens/jose_victor.jpg" alt="José Victor" width="100" height="100"><br>
+        <img src="imagens/jose.jpeg" alt="José Victor" width="100" height="100"><br>
         <sub><b>José Victor</b></sub>
       </td>
     </tr>
