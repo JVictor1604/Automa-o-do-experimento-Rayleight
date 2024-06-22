@@ -11,6 +11,7 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
   - Sensor de cor
   - Cabos de conexão
 
+
 - **Software:**
   - Bibliotecas Python: Bibliotecas Python: ![pyserial](https://img.shields.io/badge/pyserial-Latest-green) ![numpy](https://img.shields.io/badge/numpy-Latest-orange) ![pandas](https://img.shields.io/badge/pandas-Latest-yellow) ![plotly](https://img.shields.io/badge/plotly-Latest-purple) 
 
@@ -73,26 +74,25 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
 <div align="center">
   <table>
     <tr>
-      <td align="center">
-        <img src="Projeto PCD/imagens/ana.jpeg" alt="Ana Luiza" width="100" height="100"><br>
-        <sub><b>Ana Luiza</b></sub>
+      <td align="center" style="border: 2px solid purple; padding: 10px;">
+        <img src="Projeto PCD/imagens/ana.jpeg" alt="Ana Luiza" width="100" height="100" style="border-radius: 50%;"><br>
+        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">Ana Luiza</span></sub>
       </td>
-      <td align="center">
-        <img src="Projeto PCD/imagens/marco.jpeg" alt="Marco Tulio" width="100" height="100"><br>
-        <sub><b>Marco Tulio</b></sub>
+      <td align="center" style="border: 2px solid purple; padding: 10px;">
+        <img src="Projeto PCD/imagens/marco.jpeg" alt="Marco Tulio" width="100" height="100" style="border-radius: 50%;"><br>
+        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">Marco Tulio</span></sub>
       </td>
-      <td align="center">
-        <img src="Projeto PCD/imagens/yasmin.jpeg" alt="Yasmin" width="100" height="100"><br>
-        <sub><b>Yasmin</b></sub>
+      <td align="center" style="border: 2px solid purple; padding: 10px;">
+        <img src="Projeto PCD/imagens/yasmin.jpeg" alt="Yasmin" width="100" height="100" style="border-radius: 50%;"><br>
+        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">Yasmin</span></sub>
       </td>
-      <td align="center">
-        <img src="Projeto PCD/imagens/jose.jpeg" alt="José Victor" width="100" height="100"><br>
-        <sub><b>José Victor</b></sub>
+      <td align="center" style="border: 2px solid purple; padding: 10px;">
+        <img src="Projeto PCD/imagens/jose.jpeg" alt="José Victor" width="100" height="100" style="border-radius: 50%;"><br>
+        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">José Victor</span></sub>
       </td>
     </tr>
   </table>
 </div>
-
 - Ana Luiza: Implementação da função de medição do sensor de cor RGB.
 - Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
 - Yasmin: Desenvolvimento da interface e interação com o usuário.
