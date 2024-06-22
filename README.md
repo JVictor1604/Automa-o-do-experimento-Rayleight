@@ -98,11 +98,27 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
     </tr>
   </table>
 </div>
+<br>
+<div align="center" style="margin-top: 20px;">
+  <sub><span style="font-size: 14px; color: gray;">README.md criado com a ajuda de <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>.</span></sub>
+  <br>
+
+## Papel dos colaboradores
+</div>
 
 - Ana Luiza: Implementação da função de medição do sensor de cor RGB.
 - Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
 - Yasmin: Desenvolvimento da interface e interação com o usuário.
 - José Victor: Implementação da função de análise e visualização dos dados.
+
+
+<br>
+
+  
+
+<p align="center">
+  <img src="https://github.com/JVictor1604/Otimiza-o_do_Espalhamento_Rayleight_PCD/assets/97992533/341f0e48-49d7-4387-96c1-f0baa81995b7" alt="Descrição da imagem">
+</p>
 
 ## Licença
 Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
