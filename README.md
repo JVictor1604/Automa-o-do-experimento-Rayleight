@@ -89,7 +89,7 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
       </td>
       <td align="center" style="border: 2px solid purple; padding: 10px;">
         <img src="Projeto PCD/imagens/yasmin.jpeg" alt="Yasmin" width="100" height="100" style="border-radius: 50%;"><br>
-        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">Yasmin</span></sub>
+        <sub><span style="font-size: 16px; color: green; font-weight: bold;">Yasmin</span></sub>
       </td>
       <td align="center" style="border: 2px solid purple; padding: 10px;">
         <img src="Projeto PCD/imagens/jose.jpeg" alt="José Victor" width="100" height="100" style="border-radius: 50%;"><br>
