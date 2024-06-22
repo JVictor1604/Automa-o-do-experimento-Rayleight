@@ -62,12 +62,9 @@ def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_
 
     fig = go.Figure(data=(trace1, trace2, trace3, trace4, trace5, trace6), layout=layout)
 
-    if not os.path.exists("images"):
-        os.makedirs("images")
-
     fig.show()
 
-    fig.write_image("images/fgi1.png")
+
 
     
 
