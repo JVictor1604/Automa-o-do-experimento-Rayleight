@@ -117,7 +117,7 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
   
 
 <p align="center">
-  <img src="https://github.com/JVictor1604/Otimiza-o_do_Espalhamento_Rayleight_PCD/assets/97992533/341f0e48-49d7-4387-96c1-f0baa81995b7" alt="Descrição da imagem">
+  <img src="https://github.com/JVictor1604/Otimiza-o_do_Espalhamento_Rayleight_PCD/assets/171518829/fe1b443f-1c9e-42f2-88e8-85e1b4400fd0" alt="Descrição da imagem">
 </p>
 
 ## Licença
