@@ -12,7 +12,7 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
   - Cabos de conexão
 
 - **Software:**
-  - Bibliotecas Python: Bibliotecas Python: ![pyserial](https://img.shields.io/badge/pyserial-Latest-green) ![numpy](https://img.shields.io/badge/numpy-Latest-orange) ![pandas](https://img.shields.io/badge/pandas-Latest-yellow) ![plotly](https://img.shields.io/badge/plotly-Latest-purple)
+  - Bibliotecas Python: Bibliotecas Python: ![pyserial](https://img.shields.io/badge/pyserial-Latest-green) ![numpy](https://img.shields.io/badge/numpy-Latest-orange) ![pandas](https://img.shields.io/badge/pandas-Latest-yellow) ![plotly](https://img.shields.io/badge/plotly-Latest-purple) 
 
 ## Instalação
 
