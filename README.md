@@ -1,4 +1,4 @@
-# Projeto de PCD com Arduino e Python
+# Otimização do experimento Rayleight / Projeto de Ciência de Dados 
 
 ## Descrição
 
