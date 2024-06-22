@@ -12,52 +12,51 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
   - Cabos de conexão
 
 - **Software:**
-  - ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-  - Bibliotecas Python: ![pyserial](https://img.shields.io/badge/pyserial-Latest-green) ![matplotlib](https://img.shields.io/badge/matplotlib-Latest-blue) ![numpy](https://img.shields.io/badge/numpy-Latest-orange)
+  - Bibliotecas Python: Bibliotecas Python: ![pyserial](https://img.shields.io/badge/pyserial-Latest-green) ![numpy](https://img.shields.io/badge/numpy-Latest-orange) ![pandas](https://img.shields.io/badge/pandas-Latest-yellow) ![plotly](https://img.shields.io/badge/plotly-Latest-purple)
 
 ## Instalação
 
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seuusuario/projeto-pcd.git
-   cd projeto-pcd
+   git clone https://github.com/seuusuario/Otimiza-o_do_Espalhamento_Rayleight_PCD.git
+   cd Otimiza-o_do_Espalhamento_Rayleight_PCD
    
 
 2. **Instale as dependências Python:**
 
     ```bash
-    pip install pyserial matplotlib numpy
+    pip install pyserial numpy pandas plotly
     
 
 3. **Carregue o código no Arduino:**
-   [Instruções de como carregar o código no Arduino]
+   - Abra o aplicativo Arduíno IDE no seu computador
+   - Execute o código **Arduino_Sensor_Luz**
+   - Verifique qual número da porta USB em que seu arduíno está conectado
+   - Após transferir o código para seu arduíno, feche o aplicativo Arduíno IDE
 
 ## Utilização
 
-1. Conecte o Arduino ao computador.
+1.  Execute o script de medição:
+     ```bash
+     jupyter notebook main.ipynb
 
-2. Execute o script de medição:
-   ```bash
-   python medicao.py
-  
+  O arquivo main.ipynb irá chamar mais três outros arquivos que, em conjunto, realizam a medição, tratamento de dados e plotagem do gráfico. Abaixo tem-se uma breve descrição do que cada um dos arquivos fará?
 
-  O script irá:
+2. O arquivo **medição.py**:
    - Solicitar o número de amostras que você deseja fazer.
-   - Tentar identificar automaticamente a porta do Arduino.
+   - Solicitar em qual porta USB o Arduino está conectado.
    - Ler os dados de cor (RGB) da porta serial.
-   - Salvar os dados coletados em arquivos de texto na pasta dados.
-
-3. Processar os dados coletados:
-   ```bash
-   python tratamento_de_dados.py
+   
+  
+3. O arquivo **tratamento_de_dados.py**:
+    - Salvar os dados coletados em arquivos de texto na pasta dados.
+    - Calcular a média e o desvio padrão para cara cor RGB
    
 
-4. Gerar gráficos:
-   ```bash
-   python plotar_grafico.py
-
-  Para visualizar os dados, utiliza-se o script \`plotar_grafico.py\` para gerar gráficos a partir dos dados processados.
+4. O arquivo **plotar_grafico.py**:
+   - Cálculo da curva de melhor ajuste
+   - Plotagem dos dados e das curvas de melhor ajuste
 
 ## Contribuição
 
