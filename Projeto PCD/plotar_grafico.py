@@ -3,7 +3,7 @@ import plotly.graph_objs as go
 
 """A plotly é uma biblioteca que plota os mais diversos gráficos. O módulo plotly.graph_objects possui uma hierarquia de classes e 'graph_objects' refere-se a um nível dessas classes."""
 
-def pontos_grafico_com_erros(gotas, blue_data, red_data, green_data, erro_blue, erro_red, erro_green):
+def pontos_grafico_com_erros(gotas, blue_data, green_data, red_data, erro_blue, erro_red, erro_green):
 
     """ Essa função coloca os pontos no gráfico com as suas respectivas barras de erro, nesse caso, apenas vertical pois o número de gotas é constante. O scatter é utilizado em gráficos de dispersão e são utilizados para determinar a relação entre duas variáveis numéricas"""
     trace1 = go.Scatter(x=gotas, y=blue_data, mode='markers', marker=dict(color="blue"), name='Média Azul',
