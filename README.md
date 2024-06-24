@@ -1,4 +1,4 @@
-# Projeto de PCD com Arduino e Python
+# Otimização do experimento Rayleight / Projeto de Ciência de Dados 
 
 ## Descrição
 
@@ -89,7 +89,7 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
       </td>
       <td align="center" style="border: 2px solid purple; padding: 10px;">
         <img src="Projeto PCD/imagens/yasmin.jpeg" alt="Yasmin" width="100" height="100" style="border-radius: 50%;"><br>
-        <sub><span style="font-size: 16px; color: purple; font-weight: bold;">Yasmin</span></sub>
+        <sub><span style="font-size: 16px; color: green; font-weight: bold;">Yasmin</span></sub>
       </td>
       <td align="center" style="border: 2px solid purple; padding: 10px;">
         <img src="Projeto PCD/imagens/jose.jpeg" alt="José Victor" width="100" height="100" style="border-radius: 50%;"><br>
@@ -98,10 +98,27 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
     </tr>
   </table>
 </div>
+<br>
+<div align="center" style="margin-top: 20px;">
+  <sub><span style="font-size: 14px; color: gray;">README.md criado com a ajuda de <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>.</span></sub>
+  <br>
+
+## Papel dos colaboradores
+</div>
+
 - Ana Luiza: Implementação da função de medição do sensor de cor RGB.
 - Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
 - Yasmin: Desenvolvimento da interface e interação com o usuário.
 - José Victor: Implementação da função de análise e visualização dos dados.
+
+
+<br>
+
+  
+
+<p align="center">
+  <img src="https://github.com/JVictor1604/Otimiza-o_do_Espalhamento_Rayleight_PCD/assets/171518829/fe1b443f-1c9e-42f2-88e8-85e1b4400fd0" alt="Descrição da imagem">
+</p>
 
 ## Licença
 Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
