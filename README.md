@@ -106,10 +106,10 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
 ## Papel dos colaboradores
 </div>
 
-- Ana Luiza: Implementação da função de medição do sensor de cor RGB.
-- Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
-- Yasmin: Desenvolvimento da interface e interação com o usuário.
-- José Victor: Implementação da função de análise e visualização dos dados.
+- Ana Luiza: Desenvolvimento do código de plotagem do gráfico e da apresentação.
+- Marco Tulio: Desenvolvimento do Código de tratamento de Dados e da função Main.
+- Yasmin: Desenvolvimento do código de plotagem do gráfico e da apresentação.
+- José Victor: Desenvolvimento do código de medição associado ao arduino, da função Main e criação do github.
 
 
 <br>
