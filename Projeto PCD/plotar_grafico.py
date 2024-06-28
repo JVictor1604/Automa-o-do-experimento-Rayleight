@@ -15,7 +15,7 @@ def pontos_grafico_com_erros(gotas, blue_data, green_data, red_data, erro_blue, 
 
     return trace1, trace2, trace3
 
-def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas):
+def plotar_grafico(media_Azul, media_Verde,media_Vermelho, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas):
 
     trace1, trace2, trace3 = pontos_grafico_com_erros(n_de_gotas, media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde)
 
