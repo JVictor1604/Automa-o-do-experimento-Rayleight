@@ -1,18 +1,18 @@
-# Otimização do experimento Rayleight / Projeto de Ciência de Dados 
+# Otimização do experimento Rayleight / Projeto de Ciência de Dados 🖥️
 
-## Descrição
+## Descrição 📄
 
 Este projeto faz parte da disciplina de **Prática em Ciência de Dados** ministrada pelo professor Dr. Leandro Nascimento Lemos na **ILUM - Escola de Ciência**. Utilizamos como base um experimento realizado no laboratório de física com o professor Dr James Moraes de Almeida. O código realiza medições de cor utilizando um sensor conectado ao Arduino para verificar o efeito Rayleigh, a fim de montar um gráfico interativo com a relação entre a cor original e a dispersão. Os dados de cor (RGB) são coletados pelo Arduino e enviados para um computador via porta serial. Um script Python é utilizado para ler os dados da porta serial, processá-los e salvá-los em arquivos de texto.
 
-## Pré-requisitos
+## Pré-requisitos 🔍
 
-- **Hardware:**
+- **Hardware:** 🛠️
   - Arduino (qualquer modelo compatível com comunicação serial)
   - Sensor de cor
   - Cabos de conexão
 
 
-- **Software:**
+- **Software:** 🖥️
   - Bibliotecas Python: Bibliotecas
     [![pyserial](https://img.shields.io/badge/pyserial-Latest-green)](https://pypi.org/project/pyserial/)
     [![matplotlib](https://img.shields.io/badge/matplotlib-Latest-blue)](https://matplotlib.org/)
@@ -20,7 +20,7 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
     [![pandas](https://img.shields.io/badge/pandas-Latest-yellow)](https://pandas.pydata.org/)
     [![plotly](https://img.shields.io/badge/plotly-Latest-purple)](https://plotly.com/python/)
     [![time](https://img.shields.io/badge/time-Latest-red)](https://docs.python.org/3/library/time.html)
-## Instalação
+## Instalação 🔧
 
 1. **Clone o repositório:**
 
@@ -106,10 +106,10 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
 ## Papel dos colaboradores
 </div>
 
-- Ana Luiza: Implementação da função de medição do sensor de cor RGB.
-- Marco Tulio: Desenvolvimento do código Arduino para comunicação com o sensor e envio de dados pela porta serial.
-- Yasmin: Desenvolvimento da interface e interação com o usuário.
-- José Victor: Implementação da função de análise e visualização dos dados.
+- Ana Luiza: Desenvolvimento do código de plotagem do gráfico e da apresentação.
+- Marco Tulio: Desenvolvimento do Código de tratamento de Dados e da função Main.
+- Yasmin: Desenvolvimento do código de plotagem do gráfico e da apresentação.
+- José Victor: Desenvolvimento do código de medição associado ao arduino, da função Main e criação do github.
 
 
 <br>
