@@ -17,21 +17,14 @@ def medir_amostra(num_amostras, BAUD_RATE, PORTA_SERIAL):
         NOME_DO_ARQUIVO = f'dados/amostra-{numero_amostra + 1:02d}.txt'
         # Lista para armazenar as medições da amostra atual
         dados_amostra = []
-        
-        # Inicia a comunicação serial uma vez por amostra
+    
         with serial.Serial(PORTA_SERIAL, BAUD_RATE) as pserial:
-            # Realiza as 50 medições para cada amostra
             for numero_medicao in range(51):
-                # Lê a porta serial, decodifica e limpa a string
                 line = pserial.readline().decode('utf-8').rstrip().replace("Blue:", "").replace("Red:", "").replace("Green:", "")
-                # Exibe a leitura da porta serial no terminal Python
                 print(line)
-                # Adiciona a medição à lista de medições da amostra atual
                 dados_amostra.append(line)
         if numero_amostra  != num_amostras - 1:
-            input("Pressione Enter para ir a próxima medição...")
-        
-        # Retorna o nome do arquivo e os dados da amostra
+            input("Pressione Enter para ir a próxima medição...")      
         yield NOME_DO_ARQUIVO, dados_amostra
 
 def criar_arquivo_com_medicoes(nome_do_arquivo, dados_das_amostras):
