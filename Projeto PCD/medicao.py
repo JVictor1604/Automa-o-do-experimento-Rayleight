@@ -3,9 +3,13 @@ import serial
 import serial.tools.list_ports
 import time
 
+if os.path.exists("dados"):
+    os.kill('dados')
+
 # Verifica se a pasta 'dados' existe e a cria se necessário
 if not os.path.exists('dados'):
     os.makedirs('dados')
+
 
 def medir_amostra(num_amostras, BAUD_RATE, PORTA_SERIAL):
     """Cria um arquivo txt para armazenar os dados e inicia a medição de cada amostra, que será registrada 50 vezes"""
