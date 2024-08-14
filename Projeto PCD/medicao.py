@@ -2,13 +2,12 @@ import os
 import serial
 import serial.tools.list_ports
 import time
+import shutil
 
 if os.path.exists("dados"):
-    os.kill('dados')
+    shutil.rmtree("dados")
 
-# Verifica se a pasta 'dados' existe e a cria se necessário
-if not os.path.exists('dados'):
-    os.makedirs('dados')
+os.makedirs('dados')
 
 
 def medir_amostra(num_amostras, BAUD_RATE, PORTA_SERIAL):
