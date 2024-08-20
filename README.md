@@ -1,4 +1,4 @@
-# Otimização do experimento Rayleight / Projeto de Ciência de Dados 🖥️
+# Automação do experimento Rayleight / Projeto de Ciência de Dados 🖥️
 
 ## Descrição 📄
 
@@ -50,14 +50,14 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
   O arquivo main.ipynb irá chamar mais três outros arquivos que, em conjunto, realizam a medição, tratamento de dados e plotagem do gráfico. Abaixo tem-se uma breve descrição do que cada um dos arquivos fará?
 
 2. O arquivo **medição.py**:
-   - Solicitar o número de amostras que você deseja fazer.
-   - Solicitar em qual porta USB o Arduino está conectado.
-   - Ler os dados de cor (RGB) da porta serial.
+   - Solicita o número de amostras que o usuário deseja fazer.
+   - Solicita o número da porta USB em que o Arduino está conectado.
+   - Lê os dados de cor (RGB) da porta serial.
    
   
 3. O arquivo **tratamento_de_dados.py**:
-    - Salvar os dados coletados em arquivos de texto na pasta dados.
-    - Calcular a média e o desvio padrão para cara cor RGB
+    - Salva os dados coletados em arquivos de texto na pasta dados.
+    - Calcula a média e o desvio padrão para cara cor RGB
    
 
 4. O arquivo **plotar_grafico.py**:
