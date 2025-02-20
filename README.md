@@ -47,7 +47,7 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
      ```bash
      jupyter notebook main.ipynb
 
-  O arquivo main.ipynb irá chamar mais três outros arquivos que, em conjunto, realizam a medição, tratamento de dados e plotagem do gráfico. Abaixo tem-se uma breve descrição do que cada um dos arquivos fará?
+  O arquivo main.ipynb irá chamar mais três outros arquivos que, em conjunto, realizam a medição, tratamento de dados e plotagem do gráfico. Abaixo tem-se uma breve descrição do que cada um dos arquivos fará:
 
 2. O arquivo **medição.py**:
    - Solicita o número de amostras que o usuário deseja fazer.
