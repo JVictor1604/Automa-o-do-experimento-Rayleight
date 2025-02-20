@@ -4,6 +4,13 @@
 
 Este projeto faz parte da disciplina de **Prática em Ciência de Dados** ministrada pelo professor Dr. Leandro Nascimento Lemos na **ILUM - Escola de Ciência**. Utilizamos como base um experimento realizado no laboratório de física com o professor Dr James Moraes de Almeida. O código realiza medições de cor utilizando um sensor conectado ao Arduino para verificar o efeito Rayleigh, a fim de montar um gráfico interativo com a relação entre a cor original e a dispersão. Os dados de cor (RGB) são coletados pelo Arduino e enviados para um computador via porta serial. Um script Python é utilizado para ler os dados da porta serial, processá-los e salvá-los em arquivos de texto.
 
+O experimento investiga o efeito Rayleigh, que explica a dispersão da luz em meios transparentes com partículas muito menores que o comprimento de onda da luz visível. Um exemplo clássico desse fenômeno é a cor azul do céu, resultante da dispersão da luz solar pela atmosfera.
+
+No nosso caso, utilizamos um sensor de cor acoplado a um Arduino para medir a intensidade das cores vermelho (R), verde (G) e azul (B) em uma solução inicial de água. A cada medição, adicionamos pequenas quantidades de leite à solução, tornando-a progressivamente mais turva. Isso aumenta a dispersão da luz e altera a intensidade das cores medidas.
+
+O código coleta os dados do sensor e os transmite via porta serial para um computador, onde um script em Python processa e visualiza os resultados em um gráfico interativo.
+
+
 ## Pré-requisitos 🔍
 
 - **Hardware:** 🛠️
@@ -40,6 +47,13 @@ Este projeto faz parte da disciplina de **Prática em Ciência de Dados** minist
    - Execute o código **Arduino_Sensor_Luz**
    - Verifique qual número da porta USB em que seu arduíno está conectado
    - Após transferir o código para seu arduíno, feche o aplicativo Arduíno IDE
+  
+  4. **Código do Arduino 🎛️**
+  O sensor de cor utilizado no experimento funciona com base no TCS3200, que converte a intensidade de luz de diferentes cores em sinais de frequência. O código abaixo configura os pinos do Arduino e lê os valores das cores vermelho, verde e azul, enviando-os via porta serial para o computador:
+
+   **Como funciona? 🛠️**
+    o código configura os pinos do sensor e define a comunicação serial com o computador.
+    Para cada canal de cor (R, G, B), o Arduino seleciona os fotodiodos correspondentes, mede a intensidade da cor através do sinal pulseIn(out, LOW), converte os valores usando map() para uma escala de 0 a 100 e envia os valores via Serial para processamento no Python
 
 ## Utilização
 
