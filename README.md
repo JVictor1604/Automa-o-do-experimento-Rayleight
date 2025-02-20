@@ -51,7 +51,7 @@ O código coleta os dados do sensor e os transmite via porta serial para um comp
   4. **Código do Arduino 🎛️**
   O sensor de cor utilizado no experimento funciona com base no TCS3200, que converte a intensidade de luz de diferentes cores em sinais de frequência. O código abaixo configura os pinos do Arduino e lê os valores das cores vermelho, verde e azul, enviando-os via porta serial para o computador:
 
-   **Como funciona? 🛠️**
+   **Funcionamento do código do Arduino**
     o código configura os pinos do sensor e define a comunicação serial com o computador.
     Para cada canal de cor (R, G, B), o Arduino seleciona os fotodiodos correspondentes, mede a intensidade da cor através do sinal pulseIn(out, LOW), converte os valores usando map() para uma escala de 0 a 100 e envia os valores via Serial para processamento no Python
 
@@ -71,8 +71,7 @@ O código coleta os dados do sensor e os transmite via porta serial para um comp
   
 3. O arquivo **tratamento_de_dados.py**:
     - Salva os dados coletados em arquivos de texto na pasta dados.
-    - Calcula a média e o desvio padrão para cara cor RGB
-   
+    - Calcula a média e o desvio padrão para cada cor RGB
 
 4. O arquivo **plotar_grafico.py**:
    - Cálculo da curva de melhor ajuste
