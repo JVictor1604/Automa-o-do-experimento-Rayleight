@@ -48,6 +48,9 @@ O código coleta os dados do sensor e os transmite via porta serial para um comp
    - Execute o código **Arduino_Sensor_Luz**
    - Verifique qual número da porta USB em que seu arduíno está conectado
    - Após transferir o código para seu arduíno, feche o aplicativo Arduíno IDE
+
+     *!!Atenção, caso o aplicativo do Arduino esteja aberto enquanto o script estiver rodando, ele não conseguirá se conectar com a porta serial*
+  
   
   4. **Código do Arduino 🎛️**
   O sensor de cor utilizado no experimento funciona com base no TCS3200, que converte a intensidade de luz de diferentes cores em sinais de frequência. O código abaixo configura os pinos do Arduino e lê os valores das cores vermelho, verde e azul, enviando-os via porta serial para o computador:
