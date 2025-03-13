@@ -19,9 +19,24 @@ def plotar_grafico(media_Azul, media_Verde,media_Vermelho, desvio_Azul, desvio_V
 
     trace1, trace2, trace3 = pontos_grafico_com_erros(n_de_gotas, media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde)
 
-    layout = go.Layout(title='Diferença Entre Intensidade Luminosa com o Fenômeno de Dispersão',
-                       xaxis=dict(title='Número de gotas'),
-                       yaxis=dict(title='Médias de Intensidade'))
+    layout = go.Layout(
+    title='Diferença Entre Intensidade Luminosa com o Fenômeno de Dispersão',
+    title_x=0.5,  # Centraliza o título
+    xaxis=dict(
+        title='Número de gotas',
+        showline=True,  # Mostra a linha do eixo
+        linecolor='black'  # Define a cor da linha do eixo
+    ),
+    yaxis=dict(
+        title='Médias de Intensidade',
+        showline=True,
+        linecolor='black'
+    ),
+    plot_bgcolor='white',  
+    paper_bgcolor='white'  
+)
+
+
 
     fig = go.Figure(data=[trace1, trace2, trace3], layout=layout)
 
