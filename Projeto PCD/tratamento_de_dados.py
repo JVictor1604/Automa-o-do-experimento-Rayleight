@@ -9,7 +9,7 @@ def tratar_dados(caminho, separador_de_coluna, numero_de_amostras):
     considerando o número fixo de gotas informado pelo usuário.
     """
     padrao = os.path.join(caminho, "*.txt")
-    conjunto_de_dados = gb.glob(padrao)
+    conjunto_de_dados = sorted(gb.glob(padrao))
 
     if not conjunto_de_dados:
         print("Nenhum arquivo de medição encontrado no diretório especificado.")
