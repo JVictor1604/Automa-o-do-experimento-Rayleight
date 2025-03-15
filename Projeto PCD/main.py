@@ -36,7 +36,7 @@ def main() :
             
             media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas = tratar_dados(f"{nome_pasta}", ",", numero_de_amostras)
 
-            plotar_grafico(media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas)
+            plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul,  desvio_Vermelho, desvio_Verde, n_de_gotas)
         
         elif numero_acao == 2:
             
@@ -57,7 +57,7 @@ def main() :
 
             media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_Vermelho, desvio_Verde, n_de_gotas = tratar_dados(f"{nome_pasta}", ",", numero_de_amostras)
               
-            plotar_grafico(media_Azul, media_Verde, media_Vermelho, desvio_Azul, desvio_Verde, desvio_Vermelho, n_de_gotas)
+            plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul,  desvio_Vermelho, desvio_Verde, n_de_gotas)
 
         else: break
 
