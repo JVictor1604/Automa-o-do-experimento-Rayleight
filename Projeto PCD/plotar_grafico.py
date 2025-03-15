@@ -40,6 +40,9 @@ def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_
     legend=dict(
         yanchor="top",
         xanchor="right",
+    ),
+    font=dict(
+        size=26
     )
 )
 
