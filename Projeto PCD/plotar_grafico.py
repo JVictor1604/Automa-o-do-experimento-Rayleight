@@ -25,12 +25,14 @@ def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_
         showline=True,  # Mostra a linha do eixo
         linecolor='black',  # Define a cor da linha do eixo
         rangemode='tozero',
-        autorange=True
+        autorange=True,
+        ticks="outside"
     ),
     yaxis=dict(
         title='Intensidade Média (u.a.)',
         showline=True,
-        linecolor='black'
+        linecolor='black',
+        ticks="outside"
     ),
     plot_bgcolor='white',  
     paper_bgcolor='white',
@@ -38,6 +40,9 @@ def plotar_grafico(media_Azul, media_Vermelho, media_Verde, desvio_Azul, desvio_
     legend=dict(
         yanchor="top",
         xanchor="right",
+    ),
+    font=dict(
+        size=26
     )
 )
 
